@@ -1,4 +1,23 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
+:root {
+  --bg-image: url(../images/cover-image-dark.png);
+  --bg-color: #000028;
+  --title-cover: #DB00FF;
+  --accent-color: #FF0070;
+  --btn-color: #FF0070;
+  --text-cover: #000028;
+  --bg-color-text: #FF0070;
+  --text-main: #F1B2CE;
+  --btn-color-opacity: rgb(255, 0, 112, 0.5);
+  --element-display: block;
+  --width-hidden: 1;
+  --height-hidden: 1;
+  --react-hidden: rect(1, 0, 0, 0);
+}
+
+
+
+
+
+
+
+
