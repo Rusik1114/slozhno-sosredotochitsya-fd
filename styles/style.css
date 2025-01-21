@@ -1,13 +1,11 @@
-
 header {
   height: 100vh;
   min-height: 668px;
 }
 
-
 .page {
   background-image: var(--bg-image);
-  background-position: var(--bck-position);
+  background-position: center;
   background-color: var(--bg-color);
   background-attachment: fixed;
   background-size: cover;
@@ -33,7 +31,7 @@ header {
 }
 
 .border::after {
-  bottom: -113px;
+  top: 724px;
   left: 20px;
   height: 25px;
   width: 25px;
@@ -47,6 +45,7 @@ header {
   justify-content: center; 
   position: relative;
   padding-top: 20px;
+  margin-right: 142px;
 }
 
 
@@ -56,7 +55,9 @@ header {
 
 .header__theme-menu-list {
   display: flex;
-  gap: 15px;
+  gap: 20px;
+  width: 70px;
+  height: 26px
 }
 
 .header__theme-menu-button {
@@ -121,7 +122,7 @@ header {
 
 
 .title-cover {
-  margin-top: 278px;
+  margin-top: 272px;
   color: var(--title-cover);
   font-family: "IBM Plex mono", serif;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
@@ -151,6 +152,7 @@ header {
 
 .content-block {
   margin-left: 10px;
+  margin-right: 45px;
 }
 
 .section__title-main {
@@ -159,6 +161,7 @@ header {
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
+  width: 291px;
 }
 
 .section__title {
@@ -203,10 +206,6 @@ header {
   border: 1px solid var(--text-main); 
 }
 
-.content-block-main {
-  width: 695px;
-}
-
 .section-attention-reduction {
   padding-top: 60px;
   margin-left: 20px;
@@ -214,7 +213,6 @@ header {
 }
 
 .section-title-container {
-  width: 260px;
   margin-top: 20px;
 }
 
@@ -256,7 +254,6 @@ header {
 }
 
 .hidden-element {
-  position: absolute;
   width: var(--width-hidden);
   height: var(--height-hidden);
   padding: 0;
@@ -296,6 +293,7 @@ header {
 .gallery {
   margin-top: 20px;
   display: grid; 
+  line-height: 0;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
   grid-auto-rows: auto; 
   gap: 20px; 
@@ -333,18 +331,47 @@ header {
   align-items: center;
   height: 100vh;
   position: relative;
-  min-height: 635px;
+  min-height: 668px;
 }
 
 .footer-title {
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  margin-top: 25px;
+}
+
+.border-footer::after {
+  bottom: 7px;
+  left: 20px;
+  height: 25px;
+  width: 25px;
+  border-bottom: 1px solid var(--btn-color);
+  border-left: 1px solid var(--btn-color);
+}
+
+.border-footer {
+  position: relative;
+}
+
+.border-footer::before,
+.border-footer::after {
+  content: "";
+  position: absolute;
+}
+
+.border-footer::before {
+  top: 32px;
+  right: 20px;
+  height: 25px;
+  width: 25px;
+  border-top: 1px solid var(--btn-color);
+  border-right: 1px solid var(--btn-color);
 }
 
 
 @media screen and (max-width: 1023px) {
   .title-cover {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    margin-top: 176px;
+    margin-top: 243px;
   }
 
   .decorated-zone {
@@ -375,7 +402,7 @@ header {
     max-width: 364px;
     margin-left: auto; 
     margin-bottom: 243px;
-    padding-bottom: 23px;
+    padding-bottom: 6px;
   }
 
   .content-section {
@@ -388,11 +415,7 @@ header {
 
   .content-block {
     width: 46%;
-    margin-right: 3%;
-  }
-
-  .content-block-main {
-    width: 695px;
+    margin-right: 6%;
   }
 
   .section_info {
@@ -409,10 +432,6 @@ header {
     width: 100%;
   }
 
-  .section-title-container {
-    width: 230px;
-  }
-
   .section {
     margin-top: 80px;
   }
@@ -424,7 +443,12 @@ header {
 
   .section__title-main {
     margin-right: 48px;
-    width: 98%;
+    width: 106%;
+    margin-bottom: 21px;
+  }
+
+  .section-title-container {
+    width: 214px;
   }
 
   .gallery {
@@ -432,7 +456,7 @@ header {
     display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(115px, 1fr)); 
     grid-auto-rows: auto; 
-    gap: 10px; 
+    gap: 17px; 
     grid-template-areas: 
       "sunset sunset ice-cream"
       "tape books ice-cream"
@@ -456,40 +480,35 @@ header {
     max-height: 100%; 
   }
 
-  .footer {
-    padding-bottom: 252px;
-  }
-
   .footer-title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    padding-top: 270px;
   }
 }
 
 @media screen and (max-width: 767px) {
 
   .header {
-    height: 23vh;
+    height: 100vh;
   }
 
   .border::before {
-    top: 7px;
+    top: 95px;
     right: 10px;
   }
 
   .border::after {
-    top: 629px;
+    top: 720px;
     left: 10px;
   }
 
   .decorated-zone {
-    margin-right: 17px;
-    padding-top: 72px;
+    margin-right: 6px;
+    padding-top: 155px;
   }
   
   .title-cover {
     font-size: 117px;
-    margin-top: 89px;
+    margin-top: 141px;
     margin-left: 9px;
   }
 
@@ -501,13 +520,14 @@ header {
   }
 
   .header__menu-text {
-    top: 6px;
+    top: 95px;
     right: 38px;
   }
 
   .content-section {
     flex-direction: column;
-    margin-top: 38px;
+    margin-top: 21px;
+    width: 346px;
   }
 
   .content-block {
@@ -518,17 +538,13 @@ header {
   .section__title-main {
     min-width: 181%;
   }
+
   .content-block-main {
-    margin-top: 19px;
-    width: 346px;
+    margin-top: 0px;
   }
 
   .section__title {
     width: 103%;
-  }
-
-  .section__text {
-    width: 346px;
   }
 
   .section__text-dopamine {
@@ -537,7 +553,7 @@ header {
 
   .section-attention-reduction {
     margin-left: 10px;
-    padding-top: 31px;
+    padding-top: 28px;
   }
 
   .section-title-container {
@@ -546,18 +562,21 @@ header {
 
   .section {
     flex-direction: column;
-    margin-top: 51px;
+    margin-top: 47px;
     margin-left: 10px;
   }
 
+  .section_info {
+    width: 348px
+  }
+
   .content-block--main {
-    margin-bottom: 20px;
     width: 57%;
   }
 
   .block-addition {
     margin-bottom: 0;
-    width: 347px;
+    width: 346px;
   }
 
   .section-title--tips {
@@ -614,12 +633,22 @@ header {
   }
 
   .footer {
-    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-    min-height: 600px;
+    min-height: 668px;
   }
 
   .footer-title {
-    padding-bottom: 25px;
+    padding-bottom: 130px;
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
+
+  .border-footer::after {
+    bottom: 112px;
+    left: 9px;
+  }
+
+  .border-footer::before {
+    right: 11px;
+    top: 10px;
   }
 }
 
